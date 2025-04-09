@@ -8,9 +8,11 @@ import Products from "./pages/Products"
 import NotFound from "./pages/NotFound"
 import NavBar from "./components/Navbar"
 import Footer from "./components/Footer";
+import { Toaster } from "react-hot-toast"
 
 const App = () => {
   return(
+  <>
     <Router>
       <NavBar/>
       <Routes>
@@ -23,6 +25,16 @@ const App = () => {
       </Routes>
       <Footer />
     </Router>
+    <Toaster 
+      toastOptions={{
+        className: "",
+        style: {
+          fontSize: "13px"
+        },
+      }}
+      />
+  </>
+    
   )
 }
 

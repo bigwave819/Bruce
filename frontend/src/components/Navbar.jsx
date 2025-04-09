@@ -33,7 +33,7 @@ const Navbar = () => {
           {navItems.map((item, index) => (
             <li key={index}>
               <Link 
-                to={item.href} 
+                to={item.path} 
                 className="text-lg hover:text-blue-600"
                 onClick={() => setIsMenuOpen(false)}  // Close the menu when a link is clicked
               >

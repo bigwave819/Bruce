@@ -17,6 +17,8 @@ app.use(express.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // For form data
 
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 // Database Connection
 connectDB();
 

@@ -25,11 +25,14 @@ const Home = () => {
           <div className="w-full md:w-1/2 space-y-4 text-center md:text-left">
             <h1 className="font-bold text-2xl md:text-3xl">Bruce Melodie</h1>
             <p className="text-base md:text-lg font-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Sapiente molestiae tempora praesentium quia hic dolorem 
-              expedita nemo ad soluta officia magnam reiciendis 
-              accusantium similique optio tenetur cum doloremque, 
-              labore nisi.
+            Bruce Melodie, born Itahiwacu Bruce, is a renowned Rwandan 
+            singer, songwriter, and music producer. Known for his 
+            smooth vocals and catchy Afrobeat-inspired tunes, he 
+            rose to fame with hits like Katalina and Saa Moya. 
+            With multiple awards under his belt, Bruce Melodie 
+            is celebrated for blending traditional Rwandan sounds 
+            with modern rhythms, making him a standout figure in 
+            East African music.
             </p>
           </div>
         </div>

@@ -4,7 +4,8 @@ const {
   getAllSongs,
   getSingleSong,
   updateSong,
-  deleteSongs
+  deleteSongs,
+  likeSong
 } = require("../controllers/songController");
 const upload = require("../middleware/songUploadMiddleware");
 
@@ -15,6 +16,7 @@ router.get("/", getAllSongs);
 router.get("/:id", getSingleSong);
 router.put("/:id", updateSong);
 router.delete("/:id", deleteSongs);
+router.put("/like/:id", likeSong);
 
 router.post('/upload-video', upload.single("video"), (req, res) => {
     if (!req.file) {

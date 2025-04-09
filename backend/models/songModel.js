@@ -17,9 +17,9 @@ const songSchema = mongoose.Schema({
         type: String, // path to the uploaded video file
         required: true,
     },
-    like: {
-        type: Boolean,
-        default: false
+    likes: {
+        type: Number,
+        default: 0
     },
     createdAt: {
         type: Date,

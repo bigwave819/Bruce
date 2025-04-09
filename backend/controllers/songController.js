@@ -28,7 +28,7 @@ const createSong = async (req, res) => {
 const getAllSongs = async (req, res) => {
     try {
         const song = await Song.find();
-        if (songs.length === 0) {
+        if (song.length === 0) {
             res.status(404).json({
                 message: "No song found"
             })
@@ -102,9 +102,27 @@ const deleteSongs = async (req, res) => {
     }
 };
 
+const likeSong = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const song = await Song.findById(id);
+        if (!song) {
+            return res.status(404).json({ message: "Song not found" });
+        }
+
+        song.likes += 1;
+        await song.save();
+
+        res.status(200).json({ message: "Song liked successfully", likes: song.likes });
+    } catch (error) {
+        res.status(500).json({ message: "Internal server error", error: error.message });
+    }
+};
+
 module.exports = {
     createSong,
     getAllSongs,
+    likeSong,
     getSingleSong,
     updateSong,
     deleteSongs

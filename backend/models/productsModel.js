@@ -14,20 +14,23 @@ const productSchema = mongoose.Schema({
         required: true,
     },
     size: {
-        type: ['M', 'L', 'XL', '2xl'],
+        type: [String],
+        enum: ['M', 'L', 'XL', '2xl'],
         default: [],
         required: true
     },
     color: {
-        type: ['white', 'black', 'red'],
-        default:[],
-        required: true
-    },
-    category: {
-        type: ['t-shirt', 'jumper', 'sweater', 'pant', 'short'],
+        type: [String],
+        enum: ['white', 'black', 'red'],
         default: [],
         required: true
     },
+    category: {
+        type: [String],
+        enum: ['t-shirt', 'jumper', 'sweater', 'pant', 'short'],
+        default: [],
+        required: true
+    },      
     imageUrl: {
         type: String,
         required: true
