@@ -4,7 +4,8 @@ const cors = require("cors");
 const path = require("path");
 const connectDB = require("./config/db");
 const songRoute = require("./routes/songRoutes");
-const productRoute = require("./routes/productRoutes")
+const productRoute = require("./routes/productRoutes");
+const userRoutes = require("./routes/userRoutes")
 
 const app = express();
 
@@ -37,7 +38,8 @@ app.use((err, req, res, next) => {
 
 //Routes
 app.use("/api/song", songRoute);
-app.use("/api/product", productRoute)
+app.use("/api/product", productRoute);
+app.use("/api/users/", userRoutes);
 
 
 

@@ -17,5 +17,11 @@ export const API_PATHS = {
         GET_SINGLE_PRODUCT: (productId) => `/api/product/${productId}`,
         DELETE_PRODUCT: (productId) => `/api/product/${productId}`,
         UPDATE_PRODUCT: (productId) => `/api/product/${productId}`
+    },
+    AUTH: {
+        CREATE_USER: "/api/users/new",
+        LOGIN_USER: "/api/users/login",
+        DELETE_USER: "api/users/remove",
+        GET_USER_INFO: "/api/users/getuser"
     }
 }

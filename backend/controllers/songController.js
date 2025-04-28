@@ -29,7 +29,7 @@ const getAllSongs = async (req, res) => {
     try {
         const song = await Song.find();
         if (song.length === 0) {
-            res.status(404).json({
+            return res.status(404).json({
                 message: "No song found"
             })
         }
